@@ -1,0 +1,59 @@
+{
+    "name": "schildhain/laravel-class-discovery",
+    "keywords": [
+        "laravel",
+        "package",
+        "support",
+        "utilities",
+        "schildhain"
+    ],
+    "description": "Laravel package to discover classes in a directory",
+    "license": "MIT",
+    "homepage": "https://github.com/schildhain/laravel-class-discovery",
+    "authors": [
+        {
+            "name": "Matthias Wohlgemuth",
+            "email": "wohlgemuth@schildhain.de",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/contracts": ">=8.0",
+        "illuminate/support": ">=8.0",
+        "symfony/finder": ">=5.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Schildhain\\ClassDiscovery\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Schildhain\\ClassDiscovery\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+              "Schildhain\\ClassDiscovery\\ServiceProvider"
+            ],
+        }
+    },
+    "scripts": {
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes",
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    }
+}
