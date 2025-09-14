@@ -47,7 +47,7 @@
         "laravel": {
             "providers": [
               "Schildhain\\ClassDiscovery\\ServiceProvider"
-            ],
+            ]
         }
     },
     "scripts": {
